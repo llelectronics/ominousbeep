@@ -3,7 +3,7 @@ Type=Application
 X-Nemo-Application-Type=silica-qt5
 Icon=harbour-ominousbeep
 Exec=harbour-ominousbeep
-Name=harbour-ominousbeep
+Name=Ominousbeep
 # translation example:
 # your app name in German locale (de)
 #
