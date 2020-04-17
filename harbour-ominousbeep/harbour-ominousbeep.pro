@@ -20,6 +20,7 @@ DISTFILES += qml/harbour-ominousbeep.qml \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
     qml/pages/SecondPage.qml \
+    qml/pages/res/btimer-sound.wav \
     rpm/harbour-ominousbeep.changes.in \
     rpm/harbour-ominousbeep.changes.run.in \
     rpm/harbour-ominousbeep.spec \

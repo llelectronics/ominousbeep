@@ -50,6 +50,7 @@ Page {
     MouseArea {
         anchors.fill: outer
         onClicked: soundEffect.play()
+        onPressAndHold: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
     }
 
     SoundEffect {

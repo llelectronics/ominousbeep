@@ -7,23 +7,39 @@ Page {
     // The effective value will be restricted by ApplicationWindow.allowedOrientations
     allowedOrientations: Orientation.All
 
+    ListModel {
+        id: aboutModel
+        ListElement {
+            txt: qsTr("Inspired by Rick & Morty TV series")
+            url: "https://www.youtube.com/watch?v=VlgZi1UHk_E"
+        }
+        ListElement {
+            txt: qsTr("Copyright Leszek Lesner (C) 2020")
+        }
+        ListElement {
+            txt: qsTr("License: GPLv3+")
+            url: "https://github.com/llelectronics/ominousbeep"
+        }
+    }
+
     SilicaListView {
         id: listView
-        model: 20
+        model: aboutModel
         anchors.fill: parent
         header: PageHeader {
-            title: qsTr("Nested Page")
+            title: qsTr("About")
+            description: qsTr("Version: " + appVersion)
         }
         delegate: BackgroundItem {
             id: delegate
 
             Label {
                 x: Theme.horizontalPageMargin
-                text: qsTr("Item") + " " + index
+                text: txt
                 anchors.verticalCenter: parent.verticalCenter
                 color: delegate.highlighted ? Theme.highlightColor : Theme.primaryColor
             }
-            onClicked: console.log("Clicked " + index)
+            onClicked: Qt.openUrlExternally(url)
         }
         VerticalScrollDecorator {}
     }
